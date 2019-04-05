@@ -1,0 +1,120 @@
+/* Question 1: in mobile, the jumbotron is overlayed by lower part */
+/* Question 2: how to individualize the shadow in css (white shadow)? (box-shadow is not applied) */
+
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: #ffffff;
+	background-image: url("https://www.transparenttextures.com/patterns/triangles.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.logo {
+	color: #5DBCD2;
+}
+
+.container {
+	margin-top: 30px;
+}
+
+
+.bg-black {
+	background-color: black;
+}
+
+h1 {
+	font-weight: 300;
+	/*margin: .5rem;*/
+	padding: 5%;
+	/* margin-bottom: 40px; */
+}
+
+.fas {
+	color: #5DBCD2;
+}
+
+
+.mainpicture {
+	width: 50%;
+/*	display: block;*/
+	height: auto;
+/*	box-shadow: 20px white; why does this not apply*/
+}
+
+.jumbotron * {
+	max-height: 30vh;
+	margin-top: 10px;
+}
+
+.jumbopic {
+	padding-bottom: 20vh;
+}
+
+.gallery {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	margin: 20px;
+	transition-timing-function: ease-in-out;
+	transition: 0.25s;
+	z-index: -1;
+
+}
+
+.preview:hover img{ 
+	-moz-transform: translate(0px, -5px);
+    -ms-transform: translate(-0px, -5px);
+    -o-transform: translate(-0px, -5px);
+    -webkit-transform: translate(-0px, -5px);
+    transform: translate(-0px, -5px) scale(1.3);
+    transition-timing-function: ease-in-out;
+	transition: 0.25s;
+	/* z-index: -1; */
+ } 
+
+ .preview:hover h3{ 
+	/* -moz-transform: translate(0px, -10px);
+	-ms-transform: translate(-0px, -10px);
+	-o-transform: translate(-0px, -10px);
+	-webkit-transform: translate(-0px, -10px);
+	transform: translate(-0px, -10px); */
+	transition-timing-function: ease-in-out;
+	transition: 0.25s;
+	transform: translate(-0px, -5px) scale(2);
+	text-shadow: 1px 1px 1px black;
+	color: #5DBCD2;
+	font-weight: 300;
+	padding-bottom: 10px;
+/* z-index: -1; */
+} 
+
+.preview:not(:hover) h3
+{
+   visibility: hidden;
+   font-weight: 300;
+}
+
+h3 {
+	font-size: 1rem;
+	/* z-index: 1;
+	position:relative; */
+	padding-bottom: 10px;
+	text-shadow: 1px black;
+	color: grey;
+}
+
+hr {
+	width: 100%;
+	border-top: .2rem solid grey;
+	margin-top: 3rem;
+}
+
+.textlink {
+	color: black;
+	/* text-decoration: underline; */
+	font-style: italic;
+}
+
+.textlink:hover {
+	color: black;
+}
